@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+body {
+  width: 300px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.08);
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  left: 0;
+}
+.form {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form input {
+  background-color: transparent;
+  text-align: center;
+  height: 40px;
+  border: none;
+  outline: none;
+}

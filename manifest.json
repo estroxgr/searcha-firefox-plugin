@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+  "name": "Searcha",
+  "version": "1.0",
+  "description": "A simple and customizable search engine selector that allows users to switch between different search engines effortlessly.",
+  "icons": {
+    "64": "icons/64.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/64.png",
+    "default_popup": "popup.html",
+    "default_title": "Searcha"
+  },
+  "permissions": ["storage"],
+  "web_accessible_resources": ["icons/*"]
+}
