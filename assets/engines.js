@@ -1,28 +1,35 @@
-// engines.js
 export const engines = [
-    {
-      hostname: "https://google.gr",
-      name: "Google",
-    },
-    {
-      hostname: "https://youtube.com",
-      name: "YouTube",
-    },
-  ];
-  
-  // Συνάρτηση ανάκτησης όλων των μηχανών από το localStorage
-  export const getEngines = () => {
-    const data = localStorage.getItem("searchEngines");
-    return data ? JSON.parse(data) : [];
-  };
-  
-  // Αποθήκευση των μηχανών αναζήτησης στο localStorage
-  export const saveEngines = (engines) => {
-    localStorage.setItem("searchEngines", JSON.stringify(engines));
-  };
-  
-  // Αν δεν υπάρχουν στο localStorage, αποθήκευσέ τις
-  if (!localStorage.getItem("searchEngines")) {
-    saveEngines(engines);
-  }
-  
+  {
+    hostname: "https://google.com",
+    endpoint: "https://www.google.com/search?q=",
+    trigger: "gg",
+    name: "Google",
+  },
+  {
+    hostname: "https://youtube.com",
+    endpoint: "https://www.youtube.com/results?search_query=",
+    trigger: "yt",
+    name: "YouTube",
+  },
+];
+
+export const getEngines = async () => {
+  const data = localStorage.getItem("searchEngines");
+  return data ? JSON.parse(data) : [];
+};
+
+export const saveEngines = async (engines) => {
+  localStorage.setItem("searchEngines", JSON.stringify(engines));
+};
+
+if (!localStorage.getItem("searchEngines")) {
+  saveEngines(engines);
+}
+
+export const getCurrentEngine = async () => {
+  return localStorage.getItem("currEngine") || "Google";
+};
+
+export const setCurrentEngine = async (engineName) => {
+  localStorage.setItem("currEngine", engineName);
+};
