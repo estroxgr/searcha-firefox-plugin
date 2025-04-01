@@ -2,27 +2,27 @@ export const engines = [
   {
     hostname: "https://google.com",
     endpoint: "https://www.google.com/search?q=",
-    trigger: "gg",
+    trigger: "-gg",
     name: "Google",
   },
   {
     hostname: "https://youtube.com",
     endpoint: "https://www.youtube.com/results?search_query=",
-    trigger: "yt",
+    trigger: "-yt",
     name: "YouTube",
   },
 
   {
     hostname: "https://github.com",
     endpoint: "https://github.com/search?q=",
-    trigger: "gh",
+    trigger: "-gh",
     name: "GitHub",
   },
 
   {
     hostname: "https://skroutz.gr",
     endpoint: "https://www.skroutz.gr/search?keyphrase=",
-    trigger: "skr",
+    trigger: "-sk",
     name: "Skroutz",
   },
 ];
