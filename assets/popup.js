@@ -33,7 +33,6 @@ searcher.addEventListener("keyup", async () => {
   if (found) {
     await setCurrentEngine(found.name);
     await updateEngineIcon();
-    alert(`Engine set to: ${found.name}`);
   }
 });
 
