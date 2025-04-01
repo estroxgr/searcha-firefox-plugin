@@ -11,6 +11,20 @@ export const engines = [
     trigger: "yt",
     name: "YouTube",
   },
+
+  {
+    hostname: "https://github.com",
+    endpoint: "https://github.com/search?q=",
+    trigger: "gh",
+    name: "GitHub",
+  },
+
+  {
+    hostname: "https://skroutz.gr",
+    endpoint: "https://www.skroutz.gr/search?keyphrase=",
+    trigger: "skr",
+    name: "Skroutz",
+  },
 ];
 
 export const getEngines = async () => {
